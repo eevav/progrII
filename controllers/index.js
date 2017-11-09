@@ -18,16 +18,19 @@ router.get('/', (req, res) => {
 });
 
 router.get('/posts', (req, res) => {
-    Post.find({}, (err, posts)) => {
-      if(err) {
-        console.log(err);
-      }else{
-        res.locals.posts = posts;
-        console.log(posts);
-        res.render('pages/posts')
-        //res.json(posts);
-      }
-    }
-});
+    Post.find({}, (err, posts) => {
+        if(err) {
+            console.log(err);
+        }else{
+            res.locals.posts = posts;
+            console.log(posts);
+            res.render('pages/posts');
+            //res.json(posts);
+        }
+     });
+ });
+
+router.get('/posts/add', (res,re))
+
 
 module.exports = router;

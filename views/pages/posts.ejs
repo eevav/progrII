@@ -7,17 +7,16 @@
         </header>
 
         <main>
-            <div class="container">
-                <h1>Posts</h1>
+          <div class="card">
+                   <div class="card-body">
+-                        <h2><%= post.title %></h2>
++                        <h2 class="card-title"><%= post.title %></h2>
++                        <div><%= post.author %> | <%= post.createdAt %></div>
++                        <p><%= post.content %></p>
+                   </div>
+               </div>
+               <% }); %>
 
-                <% posts.forEach(function(post) {  %>
-                    <div class = "card">
-                      <div class = "card-body">
-                        <h2 class = "card title00"><%= post.title %></h2>
-                    </div><%= post.author %> <%  
-
-                </div>
-                  <%}); %>
 
             </div>
         </main>
